@@ -5,3 +5,5 @@
 **/.next-export
 .DS_Store
 npm-debug.log*
+tags
+tags.*
