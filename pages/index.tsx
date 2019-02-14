@@ -16,6 +16,7 @@ const App = () => (
         content="Pranam, Gurung, React, Javascript, Next, MDX, Typescript"
       />
       <meta name="author" content="Pranam Gurung" />
+      <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
     </Head>
     <div className="container">
       <div className="header">
