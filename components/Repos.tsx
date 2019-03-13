@@ -8,23 +8,26 @@ interface IRepo {
 }
 
 export function Repos() {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState([] as IRepo[]);
+  const repoUrl = 'https://api.github.com/users/pgurung/repos';
 
-  const fetchRepos = async () => {
+  const fetchRepos = async (url: string) => {
     const allRepos: IRepo[] = [];
 
-    await fetch('https://api.github.com/users/pgurung/repos')
+    await fetch(url)
       .then(resp => resp.json())
       .then(data => {
         data.map((repo: any) => {
-          let id = repo.id;
-          let title = repo.name;
-          let url = repo.html_url;
-          let desc = repo.description;
+          if (data != null) {
+            let id = repo.id;
+            let title = repo.name;
+            let url = repo.html_url;
+            let desc = repo.description;
 
-          let entry: IRepo = { id, title, url, desc };
+            let entry: IRepo = { id, title, url, desc };
 
-          allRepos.push(entry);
+            allRepos.push(entry);
+          }
         });
       });
 
@@ -32,8 +35,8 @@ export function Repos() {
   };
 
   useEffect(() => {
-    fetchRepos();
-  }, [repos]);
+    fetchRepos(repoUrl);
+  }, [repoUrl]);
 
   return (
     <ol>
