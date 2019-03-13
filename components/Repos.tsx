@@ -33,7 +33,7 @@ export function Repos() {
 
   useEffect(() => {
     fetchRepos();
-  }, []);
+  }, [repos]);
 
   return (
     <ol>
