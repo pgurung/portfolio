@@ -1,6 +1,6 @@
 import { Repos } from './Repos.tsx'
 
-**Hi** I am a graduate student currently completing my *Masters in Software Engineering* at University of St. Thomas in St. Paul, MN. I am a developer and a photographer.
+**Hi** I am a graduate student currently completing my *Masters in Software Engineering* at University of St. Thomas in St. Paul, MN. I also work as a Site Reliability Engineering Intern at Thomson Reuters. In my spare time I like to explore new programming languages, go hiking, and take pictures.
 
 Currently, I am exploring ~~[GO](https://golang.org), [Typescript](https://www.typescriptlang.org), and [React](https://reactjs.org)~~ [Rust](https://www.rust-lang.org) in my spare time. This website was built using React, Typescript,[Next.js](https://nextjs.org), and [MDX](https://mdxjs.com). 
 
