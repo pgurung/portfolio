@@ -42,7 +42,7 @@ export function Repos() {
   return (
     <ol>
       {repos
-        .filter((repo: IRepo) => repo.desc.includes('SEIS'))
+        .filter((repo: IRepo) => !repo.desc.includes('SEIS'))
         .map((repo: IRepo) => (
           <li key={repo.id}>
             <span>
