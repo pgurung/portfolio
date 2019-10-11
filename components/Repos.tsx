@@ -41,17 +41,19 @@ export function Repos() {
 
   return (
     <ol>
-      {repos.map((repo: IRepo) => (
-        <li key={repo.id}>
-          <span>
-            <a href={repo.url}>
-              <em>{repo.title}</em>
-            </a>
-            {` : `}
-            {repo.desc}
-          </span>
-        </li>
-      ))}
+      {repos
+        .filter((repo: IRepo) => repo.desc.includes('SEIS'))
+        .map((repo: IRepo) => (
+          <li key={repo.id}>
+            <span>
+              <a href={repo.url}>
+                <em>{repo.title}</em>
+              </a>
+              {` : `}
+              {repo.desc}
+            </span>
+          </li>
+        ))}
     </ol>
   );
 }
